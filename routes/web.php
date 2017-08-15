@@ -18,3 +18,26 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/profile/{slug}', [
+
+        'uses' => 'ProfilesController@index',
+        'as' => 'profile'
+    ]);
+
+Route::group(['middleware'=>'auth'], function(){
+
+
+    Route::get('/profile/edit/profile', [
+
+        'uses' => 'ProfilesController@edit',
+        'as' => 'profile.edit',
+    ]);
+
+     Route::post('/profile/update/update', [
+
+        'uses' => 'ProfilesController@update',
+        'as' => 'profile.update',
+    ]);
+});

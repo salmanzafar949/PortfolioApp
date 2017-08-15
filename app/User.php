@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','slug','avatar','username','gender'
     ];
 
     /**
@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    // Defining A reverse relation here for profile
+    public function profile()
+    {
+            
+            return $this->hasOne('App\Profile');
+    }
 }

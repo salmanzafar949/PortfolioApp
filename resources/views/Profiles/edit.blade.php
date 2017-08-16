@@ -23,7 +23,7 @@
                     <div class="form-group">
                     <label for="about">About  me</label>
                      <textarea name="about" id="about" cols="30" rows="10" class="form-control" required>
-                      {{$info->about}}
+                      {{stripcslashes(trim($info->about))}}
                      </textarea>
                     </div>
                     <div class="form-group">

@@ -43,6 +43,6 @@ class ProfilesController extends Controller
 
          // dd(Auth::user()->profile);
           session::flash('sucess', 'profile updated');
-          return redirect()->back();
+          return redirect()->route('home');
     }
 }

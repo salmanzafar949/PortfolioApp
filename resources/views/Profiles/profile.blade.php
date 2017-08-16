@@ -48,7 +48,8 @@
                           <p class="text-center">
                              {{ $user->profile->about }}
                           </p>
-
+                           
+                           <p class="text-center"> {{ $user->profile->country }}</p>
                         </div>
                      
                      </div>

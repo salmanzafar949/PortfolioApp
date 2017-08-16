@@ -14,11 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/contact-us', 'ContactsController@index')->name('contact');
+Route::post('/contact-us', 'ContactsController@store');
 
 Route::get('/profile/{slug}', [
 

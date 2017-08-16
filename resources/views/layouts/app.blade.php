@@ -41,11 +41,13 @@
                           <a href="{{ route('profile', ['slug'=> Auth::user()->slug])}}">My profile</a>
                         </li>
                         @endif
+                        <li> <a href="{{ route('contact')}}">Contact us</a> </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
+                        
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>

@@ -19,6 +19,7 @@ class CreatePortfoliosTable extends Migration
             $table->text('p_desc');
             $table->string('p_url');
             $table->string('P_organization');
+            $table->string('P_image');
             $table->integer('user_id');
             $table->timestamps();
         });

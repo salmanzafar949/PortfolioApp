@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('main');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -24,6 +24,11 @@ Route::get('/profile/{slug}', [
 
         'uses' => 'ProfilesController@index',
         'as' => 'profile'
+    ]);
+Route::get('/show', [
+
+        'uses' => 'PortfoliosController@show',
+        'as' => 'show'
     ]);
 
 Route::group(['middleware'=>'auth'], function(){
@@ -39,5 +44,17 @@ Route::group(['middleware'=>'auth'], function(){
 
         'uses' => 'ProfilesController@update',
         'as' => 'profile.update',
+    ]);
+
+    Route::get('/portfolio', [
+
+        'uses' => 'PortfoliosController@index',
+        'as' => 'portfolio',
+    ]);
+
+    Route::post('/portfolio/create', [
+
+        'uses' => 'PortfoliosController@store',
+        'as' => 'portfolio.store',
     ]);
 });

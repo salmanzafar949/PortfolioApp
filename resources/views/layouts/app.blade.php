@@ -40,6 +40,9 @@
                         <li>
                           <a href="{{ route('profile', ['slug'=> Auth::user()->slug])}}">My profile</a>
                         </li>
+                        <li>
+                           <a href="{{route('portfolio')}}">Create portfolio</a> 
+                        </li>
                         @endif
                         <li> <a href="{{ route('contact')}}">Contact us</a> </li>
                     </ul>

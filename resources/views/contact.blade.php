@@ -16,9 +16,9 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="Name" class="col-lg-2 control-label">Password</label>
+      <label for="Name" class="col-lg-2 control-label">name</label>
       <div class="col-lg-10">
-        <input type="text" name="name" class="form-control" id="inputPassword" placeholder="Name">
+        <input type="text" name="name" class="form-control" id="inputname" placeholder="Name">
       </div>
     </div>
     <div class="form-group">

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Requests\ContactFormRequest;
 use Illuminate\Http\Request;
-
+use App\Message;
 class ContactsController extends Controller
 {
     //
@@ -14,6 +14,7 @@ class ContactsController extends Controller
 
     public function store(ContactFormRequest $r)
     {
-         return $r->all();
+         Message::create($r->all());
+         return redirect()->route('main');
     }
 }

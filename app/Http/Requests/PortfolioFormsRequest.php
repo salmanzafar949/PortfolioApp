@@ -26,7 +26,7 @@ class PortfolioFormsRequest extends FormRequest
         return [
             //
             'p_name' => 'required|string|max:40',
-            'p_desc' =>  'string|max:1000',
+            'p_desc' =>  'max:1000',
             'P_organization' => 'required|string',
         ];
     }

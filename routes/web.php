@@ -25,7 +25,7 @@ Route::get('/profile/{slug}', [
         'uses' => 'ProfilesController@index',
         'as' => 'profile'
     ]);
-Route::get('/show', [
+Route::get('/show/{slug}', [
 
         'uses' => 'PortfoliosController@show',
         'as' => 'show'
@@ -56,5 +56,23 @@ Route::group(['middleware'=>'auth'], function(){
 
         'uses' => 'PortfoliosController@store',
         'as' => 'portfolio.store',
+    ]);
+    
+    Route::get('/portfolio/edit/{id}', [
+
+        'uses' => 'PortfoliosController@edit',
+        'as' => 'portfolio.edit',
+    ]);
+
+     Route::get('/portfolio/update/{id}', [
+
+        'uses' => 'PortfoliosController@update',
+        'as' => 'portfolio.update',
+    ]);
+    
+     Route::get('/portfolio/delete/{id}', [
+
+        'uses' => 'PortfoliosController@delete',
+        'as' => 'portfolio.delete',
     ]);
 });

@@ -5,7 +5,7 @@
    <div class="alert alert-danger"> {{ $error }} </div>
   @endforeach
 @endif
-<form class="form-horizontal" action="/portfolio/create" method="post" enctype="multipart/form-data">
+<form class="form-horizontal" action="/portfolio/update/{{$project->id}}" method="get" enctype="multipart/form-data">
    {{csrf_field()}}
   <fieldset>
     <legend>Create Portfolio</legend>
@@ -13,31 +13,31 @@
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Project Name</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" name="p_name" id="inputEmail" placeholder="Project Name e.g online admission system">
+        <input type="text" class="form-control" name="p_name" id="inputEmail" value="{{ $project->p_name}}">
       </div>
     </div>
      <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Project url</label>
       <div class="col-lg-10">
-        <input type="url" class="form-control" name="p_url" id="inputEmail" placeholder="Project url e.g www.example.com">
+        <input type="url" class="form-control" name="p_url" id="inputEmail" value="{{ $project->p_url}}">
       </div>
     </div>
     <div class="form-group">
       <label for="desc" class="col-lg-2 control-label">Project Description</label>
       <div class="col-lg-10">
-        <textarea class="form-control" name="p_desc" rows="3" id="textArea" placeholder=""></textarea>
+        <textarea class="form-control" name="p_desc" rows="3" id="textArea" placeholder="">{{ $project->p_desc}}</textarea>
       </div>
     </div>
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Company Name</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" name="P_organization" id="inputEmail" placeholder="Project Description e.g  a system that keeps track of all studen records">
+        <input type="text" class="form-control" name="P_organization" id="inputEmail" value="{{ $project->P_organization}}">
       </div>
     </div>
      <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Project Image</label>
       <div class="col-lg-10">
-        <input type="file" class="form-control" name="P_image" id="inputEmail" accept="image/*">
+        <input type="file" class="form-control" name="" id="inputEmail" accept="image/*">
       </div>
     </div>
 <div class="form-group">

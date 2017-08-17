@@ -8,9 +8,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'My Profile') }}</title>
+    <title>{{ config('app.name', 'My Profile') }} @yield('title')</title>
 
     <!-- Styles -->
+    <link rel="shortcut icon" href="{{ asset('logo.png') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -42,6 +43,9 @@
                         </li>
                         <li>
                            <a href="{{route('portfolio')}}">Create portfolio</a> 
+                        </li>
+                        <li>
+                         <a href="{{route('show',['slug' => Auth::user()->slug])}}">My Portfolio</a>
                         </li>
                         @endif
                         <li> <a href="{{ route('contact')}}">Contact us</a> </li>

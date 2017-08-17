@@ -28,6 +28,9 @@ div.imagetiles div.col-lg-3.col-md-3.col-sm-3.col-xs-6{
             </div>
            @empty
             <div class="text-center"> <h1>Nothing found</h1></div>
+            @if(Auth::check())
+                  <a href="{{route('portfolio')}}" class="btn btn-success">Create portfolio</a> 
+            @endif
            @endforelse
           </div>
   </div>

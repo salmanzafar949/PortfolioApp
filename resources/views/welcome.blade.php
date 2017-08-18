@@ -10,11 +10,15 @@
         <!-- Fonts -->
          <link rel="shortcut icon" href="{{ asset('logo.png') }}">
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
         <!-- Styles -->
         <style>
             html, body {
                 background-color: #fff;
+                
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -100,6 +104,13 @@
                     Create Your Profile and Let the World know about you
                 </div>
             </div>
+        </div>
+        <div class="container">
+        <div class="col-md-10  col-md-offset-5">
+           <footer>
+              <p class="text-info clearfix" style="">&copy; {{ date('Y')}} My Profile<p>
+           </footer>
+        </div>
         </div>
     </body>
 </html>

@@ -1,7 +1,4 @@
  @extends('layouts.app')
-
-
-
  @section('content')
               
               <div class="container">
@@ -13,7 +10,6 @@
                       <div class="panel-heading">
                       <p class="text-center">
                            {{ $user -> name}}'s Profile.
-
                         </p>
                        </div>
 

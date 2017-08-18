@@ -37,7 +37,7 @@ div.imagetiles div.col-lg-3.col-md-3.col-sm-3.col-xs-6{
                 <a href="/portfolio/edit/{{ $pr->id }}" class="btn btn-success btn-xs pull-right">
                   Edit
                  </a> &nbsp; &nbsp; 
-                 <a href="/portfolio/delete/{{ $pr->id }}" class="btn btn-primary btn-xs pull-right">
+                 <a href="/portfolio/delete/{{ $pr->id }}" class="btn btn-danger btn-xs pull-right">
                    Delete
                  </a>
              @endif
@@ -46,7 +46,8 @@ div.imagetiles div.col-lg-3.col-md-3.col-sm-3.col-xs-6{
                     <figure>
                     <img class="img-fluid img-thumbnail" src="{{Storage::url($pr->P_image)}}" alt="">
                     @if($pr->p_desc !="")
-                    <p class="img__description">{{ $pr-> p_desc }}</p>@endif
+                    <div class="img__description">{{ $pr-> p_desc }}</div>
+                    @endif
                     <figcaption> {{ $pr-> p_name }} </figcaption>
                     </figure>
                 </a>
@@ -56,11 +57,11 @@ div.imagetiles div.col-lg-3.col-md-3.col-sm-3.col-xs-6{
                   @else
                       <p class="text center  text-danger">No Url found</p>
                    @endif
-                   {{--  @if($pr->p_desc !="")
-                  <div class="float-sm-left">{{ $pr-> p_desc }}</div>
-                  @else
-                  <div class="float-sm-left text-danger">No Descrpition</div>
-                  @endif  --}}
+                   @if($pr->P_organization !="")
+                  <div class="float-sm-left"><b>Company:</b> {{ $pr-> P_organization }}</div>
+                  {{--  @else
+                  <div class="float-sm-left text-danger">No Descrpition</div>  --}}
+                  @endif
             </div>
             
            @empty
@@ -71,7 +72,4 @@ div.imagetiles div.col-lg-3.col-md-3.col-sm-3.col-xs-6{
            @endforelse
           </div>
   </div>
-  <script>
-  $("[data-toggle=popover]").popover();
-})</script>
 @stop

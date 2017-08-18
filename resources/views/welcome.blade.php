@@ -82,10 +82,12 @@
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                         <a href="{{ route('contact')}}">Contact us</a>
+                        <a href="{{route('users')}}">Users</a> 
                     @else
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
                         <a href="{{ route('contact')}}">Contact us</a>
+                        <a href="{{route('users')}}">Users</a>
                     @endif
                 </div>
             @endif

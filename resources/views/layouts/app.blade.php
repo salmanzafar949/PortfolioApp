@@ -49,8 +49,10 @@
                         </li>
                         @endif
                         <li> <a href="{{ route('contact')}}">Contact us</a> </li>
+                        <li> 
+                         <a href="{{route('users')}}">Users</a>
+                        </li>
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->

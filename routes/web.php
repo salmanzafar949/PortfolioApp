@@ -16,10 +16,12 @@ Route::get('/', function () {
 })->name('main');
 Auth::routes();
 
+Route::get('/admin', 'AdminsController@index');
+Route::post('/admin-login', 'AdminsController@login')->name('admin-login');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contact-us', 'ContactsController@index')->name('contact');
 Route::post('/contact-us', 'ContactsController@store');
-
+Route::get('/users', 'UsersController@index')->name('users');
 Route::get('/profile/{slug}', [
 
         'uses' => 'ProfilesController@index',

@@ -26,7 +26,7 @@
                               @if( Auth::id() == $user -> id)
                              <a href="{{route('profile.edit')}}" class="btn btn-lg btn-info">Edit your Profile</a>
                              @else
-                                 <a href="{{ route('profile', ['slug'=> $user->slug])}}" class="btn btn-lg btn-primary">View users Profile</a>
+                                 <a href="{{ route('show', ['slug'=> $user->slug])}}" class="btn btn-lg btn-primary">View users portfolio</a>
                              @endif 
                              
                           </p>

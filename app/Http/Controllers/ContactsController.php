@@ -15,6 +15,6 @@ class ContactsController extends Controller
     public function store(ContactFormRequest $r)
     {
          Message::create($r->all());
-         return redirect()->route('main');
+         return redirect()->back()->with('flash_message', 'Thank you. We have Recieved Your Query.!');
     }
 }

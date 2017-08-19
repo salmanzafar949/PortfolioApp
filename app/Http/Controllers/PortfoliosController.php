@@ -37,7 +37,7 @@ class PortfoliosController extends Controller
                  
             ]);
 
-            return redirect()->route('home');
+            return redirect()->route('home')->with('flash_message', 'Project Added to portfolio successfully!');
     }
 
     public function show($slug)
@@ -81,13 +81,13 @@ class PortfoliosController extends Controller
         }
         //return $project;
         //return $r->all();
-        return redirect()->route('home');
+        return redirect()->route('home')->with('flash_message', 'Project updated in portfolio successfully!');
     }
 
     public function delete($id)
     {
             $project = Portfolio::findOrFail($id);
             $project -> delete();
-            return redirect()->route('home');
+            return redirect()->route('home')->with('flash_message', 'Project Deleted!');
     }
 }

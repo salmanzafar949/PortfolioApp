@@ -25,4 +25,16 @@ class AdminsController extends Controller
         //return $r->all();
         return view ('Admins.Adashboard', compact('users'));
     }
+
+    public function edit(Request $r)
+    {
+        $id = $r->id;
+        $user = User::where('id', $id)->first();
+        return $user;
+    }
+
+    public function delete(Request $r)
+    {
+           return $r->all();
+    }
 }

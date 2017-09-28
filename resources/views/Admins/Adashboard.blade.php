@@ -15,8 +15,8 @@
             </span>
             <span class="pull-right clearfix">
              Joined  {{ $user->created_at->diffForHumans() }}
-              <a href="{{ route('profile', ['slug'=> $user->slug])}}" class="btn btn-xs btn-primary">Edit User</a>
-               <a href="{{ route('profile', ['slug'=> $user->slug])}}" class="btn btn-xs btn-danger">Delete User</a>
+              <a href="{{ route('admin/edit', ['id'=> $user->id])}}" class="btn btn-xs btn-primary">Edit User</a>
+               <a href="{{ route('admin/delete', ['id'=> $user->id])}}" class="btn btn-xs btn-danger">Delete User</a>
             </span>
         </li>
      

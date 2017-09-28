@@ -35,6 +35,9 @@ class AdminsController extends Controller
 
     public function delete(Request $r)
     {
-           return $r->all();
+        $id = $r->id;
+        $user = User::findOrFail($id);
+        $user -> delete();
+        return redirect()->route('admin-login')->with('flash_message', 'User deleted!');
     }
 }

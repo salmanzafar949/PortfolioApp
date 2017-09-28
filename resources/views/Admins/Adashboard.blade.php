@@ -6,7 +6,11 @@
   <h3> {{ $users->total() }} Total Users </h3>
   <b> In this page ({{ $users->count() }} users) </b>
   @endif  --}}
-  
+   @if(Session::has('flash_message'))
+                            <div class="alert alert-success">
+                                {{ Session::get('flash_message') }}
+                            </div>
+                        @endif
      <ul class="list-group">
         @forelse($users as $user)
         <li class="list-group-item" style="margin-top: 20px;">

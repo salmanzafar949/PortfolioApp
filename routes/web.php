@@ -16,7 +16,7 @@ Route::get('/', function () {
 })->name('main');
 Auth::routes();
 
-Route::get('/admin', 'AdminsController@index');
+Route::get('/admin', 'AdminsController@index')->name('admin');
 Route::post('/admin-login', 'AdminsController@login')->name('admin-login');
 Route::get('/admin/edit/{id}', 'AdminsController@edit')->name('admin/edit');
 Route::get('/admin/delete/{id}', 'AdminsController@delete')->name('admin/delete');

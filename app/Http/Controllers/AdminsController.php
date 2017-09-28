@@ -29,8 +29,14 @@ class AdminsController extends Controller
     public function edit(Request $r)
     {
         $id = $r->id;
-        $user = User::where('id', $id)->first();
-        return $user;
+        $user = User::findOrFail($id);
+        return view('Admins.Edit', compact('user'));
+        //return $user;
+    }
+
+    public function update(Request $r, $id)
+    {
+          return $r->all();
     }
 
     public function delete(Request $r)

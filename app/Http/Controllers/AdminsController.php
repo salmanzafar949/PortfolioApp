@@ -36,6 +36,7 @@ class AdminsController extends Controller
 
     public function update(Request $r, $id)
     {
+        //$project = Portfolio::findOrFail($id);
           return $r->all();
     }
 

@@ -6,6 +6,9 @@
   <h3> {{ $users->total() }} Total Users </h3>
   <b> In this page ({{ $users->count() }} users) </b>
   @endif  --}}
+    <a href="{{ url('/register') }}">
+    <button class="btn btn-lg btn-success pull-right">Add User</button><br>
+    </a>
    @if(Session::has('flash_message'))
                             <div class="alert alert-success">
                                 {{ Session::get('flash_message') }}

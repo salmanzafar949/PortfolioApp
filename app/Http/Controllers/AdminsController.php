@@ -36,8 +36,20 @@ class AdminsController extends Controller
 
     public function update(Request $r, $id)
     {
-        //$project = Portfolio::findOrFail($id);
-          return $r->all();
+        //return $r->all();
+         $user = User::findOrFail($id);
+         $user->update($r->all());
+         return "Info updated";
+         //return $user;
+        // if($user)
+        // {
+              
+        // }
+        // else
+        // {
+        //     return "Error Not found What you are Looking for";
+        // }
+        //   //return $user;
     }
 
     public function delete($id)
@@ -45,6 +57,7 @@ class AdminsController extends Controller
         
         $user = User::findOrFail($id);
         $user -> delete();
-        return redirect()->route('admin-login')->with('flash_message', 'User deleted!');
+        return "Deleted";
+       // return redirect()->route('admin-login')->with('flash_message', 'User deleted!');
     }
 }

@@ -26,9 +26,9 @@ class AdminsController extends Controller
         return view ('Admins.Adashboard', compact('users'));
     }
 
-    public function edit(Request $r)
+    public function edit($id)
     {
-        $id = $r->id;
+       
         $user = User::findOrFail($id);
         return view('Admins.Edit', compact('user'));
         //return $user;
@@ -40,9 +40,9 @@ class AdminsController extends Controller
           return $r->all();
     }
 
-    public function delete(Request $r)
+    public function delete($id)
     {
-        $id = $r->id;
+        
         $user = User::findOrFail($id);
         $user -> delete();
         return redirect()->route('admin-login')->with('flash_message', 'User deleted!');

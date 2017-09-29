@@ -20,7 +20,7 @@ Route::get('/admin', 'AdminsController@index')->name('admin');
 Route::post('/admin-login', 'AdminsController@login')->name('admin-login');
 Route::get('/admin/edit/{id}', 'AdminsController@edit')->name('admin/edit');
 Route::get('/admin/delete/{id}', 'AdminsController@delete')->name('admin/delete');
-Route::get('/admin/update/{id}', 'AdminsController@update')->name('admin/update');
+Route::post('/admin/update/{id}', 'AdminsController@update')->name('admin/update');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/contact-us', 'ContactsController@index')->name('contact');
 Route::post('/contact-us', 'ContactsController@store');

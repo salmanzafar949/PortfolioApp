@@ -32,7 +32,7 @@
         <textarea class="form-control" rows="3" name="message" id="textArea"></textarea>
       </div>
     </div>
-   @captcha()
+   {{--  @captcha()  --}}
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="reset" class="btn btn-default">Cancel</button>
